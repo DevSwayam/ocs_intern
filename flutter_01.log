@@ -1,0 +1,120 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+StateError: Bad state: No element
+
+```
+#0      Stream.first.<anonymous closure> (dart:async/stream.dart:1282:9)
+#1      _rootRun (dart:async/zone.dart:1418:47)
+#2      _CustomZone.run (dart:async/zone.dart:1328:19)
+#3      _CustomZone.runGuarded (dart:async/zone.dart:1236:7)
+#4      _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#5      _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:7)
+#6      _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#7      _SyncBroadcastStreamController._sendDone.<anonymous closure> (dart:async/broadcast_stream_controller.dart:399:22)
+#8      _BroadcastStreamController._forEachListener (dart:async/broadcast_stream_controller.dart:322:15)
+#9      _SyncBroadcastStreamController._sendDone (dart:async/broadcast_stream_controller.dart:398:7)
+#10     _BroadcastStreamController.close (dart:async/broadcast_stream_controller.dart:268:5)
+#11     _AsBroadcastStreamController.close (dart:async/broadcast_stream_controller.dart:504:27)
+#12     _rootRun (dart:async/zone.dart:1418:47)
+#13     _CustomZone.run (dart:async/zone.dart:1328:19)
+#14     _CustomZone.runGuarded (dart:async/zone.dart:1236:7)
+#15     _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#16     _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:7)
+#17     _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#18     _SinkTransformerStreamSubscription._close (dart:async/stream_transformers.dart:87:11)
+#19     _EventSinkWrapper.close (dart:async/stream_transformers.dart:21:11)
+#20     _StringAdapterSink.close (dart:convert/string_conversion.dart:251:11)
+#21     _Utf8ConversionSink.close (dart:convert/string_conversion.dart:305:20)
+#22     _ErrorHandlingAsciiDecoderSink.close (dart:convert/ascii.dart:261:15)
+#23     _ConverterStreamEventSink.close (dart:convert/chunked_conversion.dart:81:18)
+#24     _SinkTransformerStreamSubscription._handleDone (dart:async/stream_transformers.dart:132:24)
+#25     _rootRun (dart:async/zone.dart:1418:47)
+#26     _CustomZone.run (dart:async/zone.dart:1328:19)
+#27     _CustomZone.runGuarded (dart:async/zone.dart:1236:7)
+#28     _BufferingStreamSubscription._sendDone.sendDone (dart:async/stream_impl.dart:394:13)
+#29     _BufferingStreamSubscription._sendDone (dart:async/stream_impl.dart:404:7)
+#30     _BufferingStreamSubscription._close (dart:async/stream_impl.dart:291:7)
+#31     _SyncStreamControllerDispatch._sendDone (dart:async/stream_controller.dart:782:19)
+#32     _StreamController._closeUnchecked (dart:async/stream_controller.dart:637:7)
+#33     _StreamController.close (dart:async/stream_controller.dart:630:5)
+#34     _Socket._onData (dart:io-patch/socket_patch.dart:2321:21)
+#35     _rootRunUnary (dart:async/zone.dart:1442:13)
+#36     _CustomZone.runUnary (dart:async/zone.dart:1335:19)
+#37     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1244:7)
+#38     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:341:11)
+#39     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+#40     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:774:19)
+#41     _StreamController._add (dart:async/stream_controller.dart:648:7)
+#42     _StreamController.add (dart:async/stream_controller.dart:596:5)
+#43     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1846:35)
+#44     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1315:18)
+#45     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#46     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#47     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:122:13)
+#48     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:193:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.0, on Microsoft Windows [Version 10.0.19043.1503], locale en-IN)
+    • Flutter version 2.10.0 at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 5f105a6ca7 (5 days ago), 2022-02-01 14:15:42 -0800
+    • Engine revision 776efd2034
+    • Dart version 2.16.0
+    • DevTools version 2.9.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+    • Android SDK at C:\Users\Swayam\AppData\Local\Android\sdk
+    • Platform android-32, build-tools 32.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7249189)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop for Windows
+    ✗ Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2020.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7249189)
+
+[✓] IntelliJ IDEA Community Edition (version 2021.2)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.64.0)
+    • VS Code at C:\Users\Swayam\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.34.0
+
+[✓] Connected device (5 available)
+    • HD1901 (mobile)                    • d614c6cb      • android-arm64  • Android 11 (API 30)
+    • Android SDK built for x86 (mobile) • emulator-5554 • android-x86    • Android 8.0.0 (API 26) (emulator)
+    • Windows (desktop)                  • windows       • windows-x64    • Microsoft Windows [Version 10.0.19043.1503]
+    • Chrome (web)                       • chrome        • web-javascript • Google Chrome 98.0.4758.81
+    • Edge (web)                         • edge          • web-javascript • Microsoft Edge 98.0.1108.43
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
